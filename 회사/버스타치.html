@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>머스타치</title>
+    <script>
+        var Mustache = require('mustache');
+
+        var view = {
+            title: "Joe",
+            calc: function () {
+                return 2 + 4;
+            }
+        };
+
+        var output = Mustache.render("{{title}} spends {{calc}}", view);
+    </script>
+</head>
+<body onload="renderHello()">
+    <div id="target">Loading...</div>
+    <script id="template" type="x-tmpl-mustache">
+        Hello {{ name }}!
+    </script>
+
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <script src="render.js"></script>
+</body>
+</html>

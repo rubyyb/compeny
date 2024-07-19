@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">자바스크립트 베이직 선택자</h1>
+    <div class="container">
+        <ul id="list1" class="list">
+            <li class="red">li1</li>
+            <li>li2</li>
+            <li>li3</li>
+            <li>li4</li>
+            <li>li5</li>
+        </ul><!-- list1 -->
+    </div><!-- container -->
+    <div class="container">
+        <ul id="list2" class="list">
+            <li>li1</li>
+            <li>li2</li>
+            <li>li3</li>
+            <li>li4</li>
+            <li>li5</li>
+        </ul><!-- list2 -->
+    </div><!-- container -->
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis quae, 
+        ea sit necessitatibus ullam adipisci perspiciatis tempora impedit veniam 
+        sunt nam atque soluta itaque perferendis, voluptate suscipit dolorum. Corrupti, quo!
+    </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis quae, 
+        ea sit necessitatibus ullam adipisci perspiciatis tempora impedit veniam 
+        sunt nam atque soluta itaque perferendis, voluptate suscipit dolorum. Corrupti, quo!
+    </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis quae, 
+        ea sit necessitatibus ullam adipisci perspiciatis tempora impedit veniam 
+        sunt nam atque soluta itaque perferendis, voluptate suscipit dolorum. Corrupti, quo!
+    </p>
+    <script>
+        var firstTitle = document.getElementById('title'),
+            myList = document.getElementsByClassName('list'),
+            paragraphs = document.getElementsByTagName('p'),
+            myList2 = document.querySelector('.list .red')
+        
+
+        // console.log(firstTitle);
+        // console.log(myList);
+        // console.log(paragraphs);
+        // console.log(myList2);
+    
+        firstTitle.style.color = 'red';
+        myList[1].style.display = 'none';
+        paragraphs[0].style.color = 'red'; //1개만 색을 바꾸기
+        
+        //for (시작점 / 끝 / 증감)
+        for(var i = 0; i<= paragraphs.length; i++) {
+            paragraphs[i].style.color = 'red'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수</h1>
+    <script>
+        function send() {
+            alert('경고');
+        }
+
+        // send();
+
+        var a = 10;
+        var b = 20; // 전역번수
+
+        // 더하는 일을 하는 함수라 값이 두개가 들어와야함
+        function add(x,y) {
+            var sum = x + y // 지역변수
+            return sum; // 밖으로 배달
+        }
+        
+        // 실행을 도와주는 요소
+        //total이 sum이 된다면
+        var total = add(a, b);
+        document.write(total);
+
+    </script>
+
+
+    <h2>객체</h2>
+    <script>
+        /*  
+        var obj = new Object(); 첫번째 방법
+        var obj = {};  두번째 방법
+        */
+
+        // var baby = {}; // 한 변수 안에 아래 값들을 한번에 묶을 때 객체 사용
+        // baby.age='2살';
+        // baby.sex='남자';
+        // baby.birthday='3월 8일';
+        
+        var baby = {
+            age: '2살', // property
+            sex: '남자',
+            birthday: '3월 8일',
+            getAge: getAge
+        }
+
+        function getAge(){
+            return this.age;
+        }
+        var age = baby.getAge();
+
+        document.write(age);
+        // document.write(baby.sex);
+        // document.write(baby.birthday);
+
+    </script>
+</body>
+</html>

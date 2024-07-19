@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .section6__title {
+            display: flex;
+        }
+        .section6__title--1, .section6__title--2 {
+            text-align: center;
+            text-indent: -999em;
+            white-space: nowrap;
+            overflow: hidden;
+            opacity: 0;
+        }
+        .section6__title--1 {
+            width: 500px;
+            height: 402px;
+            background: url('https://web-files-tokyo-cdn.masangsoft.com/public/DK/event/2024/0718/main_ex2.png') -4px 0 no-repeat;
+        }
+        .section6__title--2 {
+            width: 335px;
+            height: 269px;
+            background: url('https://web-files-tokyo-cdn.masangsoft.com/public/DK/event/2024/0718/main_ex1.png') -4px 0 no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="section6__title">
+        <div class="section6__title--1" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px); filter: brightness(1);">혈맹</div>
+        <div class="section6__title--2" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px); filter: brightness(1);">공방</div>
+    </div>
+
+    <script>
+    $(function(){
+            var yt = {
+                name: "sub6",
+                mounted: function() { // 함수 정의가 올바른지 확인
+                    var ft = gsap.timeline({ paused: true }).addLabel("start")
+                        .from(".section6__title--1", {
+                            filter: "blur(10px)",
+                            scale: 1.5,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power4.in"
+                        }, "start+=0.0")
+                        .from(".section6__title--2", {
+                            filter: "blur(10px)",
+                            scale: 1.5,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power4.in"
+                        }, "start+=0.4")
+                        .fromTo(".section6__title--1", {
+                            filter: "brightness(4)"
+                        }, {
+                            filter: "brightness(1)",
+                            duration: 1.5,
+                            ease: "power4.easeIn"
+                        }, "start+=1.4")
+                        .fromTo(".section6__title--2", {
+                            filter: "brightness(4)"
+                        }, {
+                            filter: "brightness(1)",
+                            duration: 1.5,
+                            ease: "power4.easeIn"
+                        }, "start+=1.4")
+                        .from(".section6__sub", {
+                            duration: 1,
+                            opacity: 0,
+                            ease: "power4.in"
+                        }, "start+=0.5")
+                        .from(".section6__con--item-1", {
+                            filter: "blur(50px)",
+                            y: "+100",
+                            duration: 2,
+                            opacity: 0,
+                            ease: "power4.out"
+                        }, "start+=1.6")
+                        .from(".section6__con--item-2", {
+                            filter: "blur(50px)",
+                            y: "+100",
+                            duration: 2,
+                            opacity: 0,
+                            ease: "power4.out"
+                        }, "start+=1.9")
+                        .from(".section6__con--item-3", {
+                            filter: "blur(50px)",
+                            y: "+100",
+                            duration: 2,
+                            opacity: 0,
+                            ease: "power4.out"
+                        }, "start+=2.1")
+                        .from(".section6__con--bg", {
+                            filter: "blur(50px)",
+                            duration: 2,
+                            opacity: 0,
+                            ease: "power4.out"
+                        }, "start+=2.5")
+                        .from(".section6__text-bg", {
+                            scaleX: 0,
+                            duration: 2,
+                            opacity: 0,
+                            ease: "power4.out"
+                        }, "start+=2.8")
+                        .from(".section6__text", {
+                            y: "-30",
+                            duration: 1.5,
+                            opacity: 0,
+                            ease: "power4.out"
+                        }, "start+=3.5");
+
+                    // 타임라인 시작
+                    ft.play();
+                }
+            }
+
+            // mounted() 함수 호출
+            yt.mounted();
+        });
+    </script>
+
+
+</body>
+</html>

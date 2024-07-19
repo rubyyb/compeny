@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>배열</h2>
+    <script>
+        /*
+            배열만들기
+            var arr = [];
+
+            var arr = new Array();
+            배열은 0 = 첫번째
+        */
+
+        // var fruits = [];
+        // fruits[0] = '사과';
+        // fruits[1] = '배';
+        // fruits[2] = '바나나';
+
+        var fruits = ['사과', '배', '바나나', '딸기'];
+        var animals = ['사자', '호랑이', '곰'];
+
+        // 배열의 갯수를 셀때
+        var amount = fruits.length;
+
+        // 배열 사이마다 /를 넣고싶을때
+        var newStr = fruits.join('/');
+        // reverse =  역순으로
+        var newArr = fruits.reverse();
+
+        var newArr2 = fruits.sort(function(a,b){
+            return b-a;
+        });
+
+        // 두개의 배열을 하나로 합치기
+        //concat 붙이다 a.concat(b)
+        //a를 b에 붙이다
+        var newArr3 = fruits.concat(animals);
+
+        //특정부분만 잘라서 보이고 싶음
+        //1번부터 3번 '앞!!'까지 자르기
+        //즉 1번과 2번만 자르기
+        // 원본 유지
+        var newArr4 = fruits.slice(1,3);
+
+        // 1번부터 3번까지없애
+        // 원본 바꿈
+        var newArr5 = fruits.splice(1,3);
+
+        
+        document.write(fruits + '<br/>');
+
+        // 배열안에서 특정 값만 나오게 하고싶을 떄
+        document.write(fruits[0] + '<br>');
+
+        document.write(amount + '<br/>');
+        document.write(newStr + '<br/>');
+        document.write(newArr + '<br/>');
+        document.write(newArr2 + '<br/>');
+        document.write(newArr3 + '<br/>');
+        document.write(newArr4 + '<br/>');
+        document.write(newArr5 + '<br/>');
+    </script>
+
+    <h2>값 추가하기 - push</h2>
+    <p>기존의 값 뒤에 추가한다.</p>
+    <script>
+        var beers = ['하이네켄', ' 코로나', ' 스텔라', '카스'];
+        beers.push('츄하이', '레몬맥주');
+
+        document.write(beers + '<br/>');
+    </script>
+
+    <h2>값 추가하기 - unshift</h2>
+    <p>기존의 값 앞에 추가한다.</p>
+    <script>
+        var beers = ['하이네켄', ' 코로나', ' 스텔라', '카스'];
+        beers.unshift('츄하이', '레몬맥주');
+
+        document.write(beers + '<br/>');
+    </script>
+
+    <h2>값 삭제하기 - pop</h2>
+    <p>기존의 값 중 맨 뒤 값을 삭제한다</p>
+    <script>
+        var beers = ['하이네켄', ' 코로나', ' 스텔라', '카스'];
+        beers.pop();
+
+        document.write(beers + '<br/>');
+    </script>
+
+    <h2>값 삭제하기 - shift</h2>
+    <p>기존의 값 중 맨 앞 값을 삭제한다</p>
+    <script>
+        var beers = ['하이네켄', ' 코로나', ' 스텔라', '카스'];
+        beers.shift();
+
+        document.write(beers + '<br/>');
+    </script>
+</body>
+</html>
